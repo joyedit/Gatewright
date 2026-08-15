@@ -1,0 +1,12 @@
+{
+  "type": "code",
+  "modid": "gatewright",
+  "name": "Gatewright",
+  "authors": ["Feyd"],
+  "description": "A 3x3 swinging wooden gate with iron cross-braces. Three blocks wide and three blocks tall, built from vertical planks over three nailed rails, with riveted iron straps running corner to corner, pintle hinges on the hanging edge, a drop-bar latch, a ring handle and a hinged peep window. Available in every wood type, lockable, airtight for cellars, and it swings on the vanilla door system so double gates, locks and reinforced doors all work as usual.",
+  "version": "0.2.1",
+  "dependencies": {
+    "game": "",
+    "survival": ""
+  }
+}

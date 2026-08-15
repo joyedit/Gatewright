@@ -1,0 +1,80 @@
+{
+	code: "gate",
+	class: "BlockGeneric",
+	entityClass: "Generic",
+	// Lockable first so that it short-circuits the Door behavior while locked.
+	// Stock vanilla Door behavior. Its two width<=2 assumptions are corrected by
+	// the Harmony patches in src/DoorPatches.cs rather than by a custom behavior,
+	// because BEBehaviorDoor resolves its door behavior by exact type.
+	behaviors: [
+		{ name: "Lockable" },
+		{ name: "Door" },
+		{ name: "BlockEntityInteract" }
+	],
+	entityBehaviors: [{ name: "Door" }],
+	variantgroups: [
+		{ code: "style", states: ["3x3gate"] },
+		{ code: "wood", states: ["aged", "veryaged"], loadFromProperties: "game:block/wood" }
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["gate-{style}-*"]
+		},
+		width: 3,
+		height: 3,
+		airtight: true,
+		// Slow, heavy swing - this is a 3x3 leaf, not a house door.
+		easingSpeed: 1.5,
+		openSound: "game:sounds/block/largedoor-open",
+		closeSound: "game:sounds/block/largedoor-close"
+	},
+	creativeinventory: { "general": ["*"], "decorative": ["*"] },
+	shape: { base: "block/gate/3x3gate" },
+	textures: {
+		wood: {
+			base: "game:block/wood/debarked/{wood}",
+			rotation: 90,
+			blendedOverlays: [{ base: "game:block/wood/door/overlay-tall", blendMode: "Overlay" }]
+		}
+	},
+	// Double gates mirror x without reversing winding order, so faces must not cull.
+	renderPass: "OpaqueNoCull",
+	faceCullMode: "NeverCull",
+	blockmaterial: "Wood",
+	sideAo: { all: false },
+	heldTpIdleAnimation: "holdunderarm",
+	replaceable: 500,
+	resistance: 5.5,
+	lightAbsorption: 0,
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	guiTransform: {
+		origin: { x: 0.75, y: 1.6, z: 0.8 },
+		scale: 0.52
+	},
+	tpHandTransform: {
+		translation: { x: -0.74, y: -2.32, z: -1.6 },
+		rotation: { x: 8, y: -3, z: 59 },
+		origin: { x: 0.75, y: 1, z: 1 },
+		scale: 0.5
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -90, y: 0, z: 0 },
+		origin: { x: 0.75, y: 1.5, z: 0.85 },
+		scale: 3
+	},
+	selectionbox: { x1: 0, y1: 0, z1: 0.875, x2: 1, y2: 1, z2: 1 },
+	collisionbox: { x1: 0, y1: 0, z1: 0.875, x2: 1, y2: 1, z2: 1 },
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 40
+	},
+	sounds: {
+		"place": "game:block/planks",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	materialDensity: 600
+}

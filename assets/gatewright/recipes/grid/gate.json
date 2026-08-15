@@ -1,0 +1,17 @@
+{
+	// Nails top-left. Must not collide with vanilla's gate patterns, which take
+	// NWW-bottom-left (2x3), WWN-bottom-right (2x4), N-top-left-with-gaps (2x2)
+	// and WW_,WW_,WWN (1x3) - a shared pattern silently resolves to vanilla's
+	// gate, since quantities alone do not distinguish two recipes.
+	ingredientPattern: "NWW,WWW,WWW",
+	ingredients: {
+		"W": { type: "item", code: "game:plank-*", name: "wood", quantity: 4 },
+		"N": { type: "item", code: "game:metalnailsandstrips-{metal}", quantity: 10 }
+	},
+	allowedVariants: {
+		metal: ["copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum"]
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "gatewright:gate-3x3gate-{wood}" }
+}

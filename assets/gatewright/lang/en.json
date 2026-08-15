@@ -1,0 +1,18 @@
+{
+	"block-gate-3x3gate-*": "Braced gate",
+	"block-gate-3x3gate-aged": "Aged braced gate",
+	"block-gate-3x3gate-veryaged": "Very aged braced gate",
+	"block-gate-3x3gate-birch": "Birch braced gate",
+	"block-gate-3x3gate-oak": "Oak braced gate",
+	"block-gate-3x3gate-maple": "Maple braced gate",
+	"block-gate-3x3gate-pine": "Pine braced gate",
+	"block-gate-3x3gate-acacia": "Acacia braced gate",
+	"block-gate-3x3gate-kapok": "Kapok braced gate",
+	"block-gate-3x3gate-baldcypress": "Bald cypress braced gate",
+	"block-gate-3x3gate-larch": "Larch braced gate",
+	"block-gate-3x3gate-redwood": "Redwood braced gate",
+	"block-gate-3x3gate-ebony": "Ebony braced gate",
+	"block-gate-3x3gate-walnut": "Walnut braced gate",
+	"block-gate-3x3gate-purpleheart": "Purpleheart braced gate",
+	"gatewright:handbooktext-gate": "A three by three braced gate: vertical planks pinned to three nailed rails, with riveted iron straps running corner to corner and pintle hinges on the hanging edge. Wide enough to drive a cart through. Place two side by side for a six-wide double gate."
+}
